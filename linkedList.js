@@ -15,10 +15,7 @@ var linkedListGenerator = function(){
   }
 
   function getTail(){
-    // if Next points to null, return that key's value
-    if(next === null){
-      return;
-    }
+    return null;
   }
 
   function add(value){
