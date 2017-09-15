@@ -4,22 +4,35 @@
  * @return {Object} an object exposing methods to be used to manipulate a linked list
  */
 
-var linkedList = {};
-linkedList = linkedListGenerator();
-
+//var linkedList = {};
+//linkedList = linkedListGenerator();
 
 
 var linkedListGenerator = function(){
-   function getHead(){
-    return null;
+  var head = null;
+  var tail = null;
+
+  function getHead(){
+    return head;
   }
 
   function getTail(){
-    return null;
+    return tail;
   }
 
   function add(value){
-    // set old tail to point to Added Item, set Added Item to point to null
+    var node = {value: value,
+                next: null};
+
+    if (!head){
+      head = node;
+      tail = node;
+
+    } else {
+      tail.next = node;
+      tail = node;
+    }
+    return node;
   }
 
   function remove(number){
@@ -27,10 +40,11 @@ var linkedListGenerator = function(){
     // function remove ([2])
     // make [1] point to [3]
     // [0] -> [1] -> [3] -> null
+
+
   }
 
   function get(number){
-
   }
 
   function insert(value, number){
@@ -44,7 +58,6 @@ var linkedListGenerator = function(){
     get: get,
     insert: insert
   };
-}
-
+};
 
 
