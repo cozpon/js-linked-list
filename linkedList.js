@@ -35,16 +35,63 @@ var linkedListGenerator = function(){
     return node;
   }
 
+  function get(number){
+    var currentNode = head,
+        count = 0;
+
+    while (count < number) {
+      if(currentNode.next === null){
+        return false;
+      }
+      currentNode = currentNode.next;
+      count++;
+      }
+
+
+    return currentNode;
+  }
+
+
+
+
+
+
+
+
+
+
+
+    // var head = { value: value,
+    //         next: {
+    //           value: value,
+    //           next: {
+    //             value: value,
+    //             next: {
+    //               value: value,
+    //               next: null
+    //             }
+    //           }
+    //         }
+    //       };
+    //        console.log(head, "Head");
+
+
+
+    // var x = head;
+    // for(i = 0; i > number; i++){
+    // // as you loop through array
+    // //head . next
+    // //head . next . next
+    // //head.next.next.next
+    //   }
+    // }
+
   function remove(number){
     // [0] -> [1] -> [2] -> [3] -> null
     // function remove ([2])
     // make [1] point to [3]
     // [0] -> [1] -> [3] -> null
 
-
-  }
-
-  function get(number){
   }
 
   function insert(value, number){
